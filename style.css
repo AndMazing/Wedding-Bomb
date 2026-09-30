@@ -530,29 +530,81 @@ button:disabled:hover {
 
     body {
         align-items: flex-start;
-        padding: 10px;
-        box-sizing: border-box;
+        padding: 8px;
+        min-height: 100vh;
     }
 
     .game {
         width: 100%;
         max-width: 100%;
         padding: 12px;
-        box-sizing: border-box;
+        border-width: 2px;
+        border-radius: 8px;
     }
 
-    /* Die 4 Module untereinander */
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    header {
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    .warning {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .serial {
+        font-size: 9px;
+    }
+
+
+    /* =========================
+       TIMER
+       ========================= */
+
+    .timer-container {
+        margin: 12px 0;
+    }
+
+    .timer-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    #timer {
+        font-size: 38px;
+    }
+
+
+    /* =========================
+       MODULES
+       ========================= */
+
     main {
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: 12px;
+        gap: 10px;
     }
 
     .module {
+        width: 100%;
         height: auto;
-        min-height: 220px;
-        padding: 15px;
-        box-sizing: border-box;
+        min-height: 190px;
+        padding: 12px;
+    }
+
+    .module-title {
+        font-size: 11px;
+        margin-bottom: 10px;
     }
 
 
@@ -560,13 +612,13 @@ button:disabled:hover {
        WIRES
        ========================= */
 
-    .wire-container {
-        gap: 15px;
+    .wires {
+        gap: 12px;
     }
 
     .wire {
-        width: 55px;
-        height: 55px;
+        width: 100%;
+        height: 12px;
     }
 
 
@@ -574,74 +626,68 @@ button:disabled:hover {
        BIG BUTTONS
        ========================= */
 
-    .button-container {
-        gap: 15px;
+    .buttons {
+        gap: 12px;
     }
 
     .big-button {
         width: 75px;
         height: 75px;
+        border-width: 5px;
+        font-size: 11px;
     }
 
 
     /* =========================
-       SYMBOLE
+       SYMBOLS
        ========================= */
 
-    .symbol-container {
+    .symbols {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        gap: 10px;
         justify-items: center;
+        align-content: center;
     }
 
-    .symbol {
-        width: 70px;
-        height: 70px;
+    .symbols button {
+        width: 65px;
+        height: 65px;
         font-size: 30px;
     }
 
 
     /* =========================
-       ZAHLEN
+       PASSWORD / ZAHLEN
        ========================= */
 
-    .number-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 7px;
+    .display-module {
+        min-height: 210px;
     }
-
-    .number-grid button {
-        width: 100%;
-        height: 48px;
-        font-size: 18px;
-        padding: 0;
-    }
-
-
-    /* =========================
-       DISPLAY
-       ========================= */
 
     .display {
         height: 55px;
-        padding: 10px;
-        font-size: 18px;
-        box-sizing: border-box;
+        padding: 8px;
+        margin-bottom: 10px;
     }
 
-
-    /* =========================
-       ÜBERSCHRIFTEN
-       ========================= */
-
-    h1 {
-        font-size: 28px;
+    #numberDisplay {
+        font-size: 22px;
+        letter-spacing: 5px;
     }
 
-    .module h2 {
-        font-size: 18px;
+    .number-buttons {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 6px;
+        margin-top: 0;
+    }
+
+    .number-buttons button {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        padding: 0;
     }
 
 
@@ -649,8 +695,67 @@ button:disabled:hover {
        STATUS
        ========================= */
 
+    .status {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 12px;
+        gap: 10px;
+    }
+
     #message {
+        font-size: 12px;
+        text-align: right;
+    }
+
+
+    /* =========================
+       START SCREEN
+       ========================= */
+
+    .start-box {
+        width: calc(100% - 30px);
+        padding: 30px 20px;
+    }
+
+    .start-box h2 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .start-box p {
         font-size: 14px;
-        text-align: center;
+    }
+
+    #startButton {
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       SUCCESS / FAILURE
+       ========================= */
+
+    .success-box,
+    .failure-box {
+        width: calc(100% - 30px);
+        padding: 25px 15px;
+    }
+
+    .success-box h2 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .explode-gif {
+        width: 180px;
+        height: 180px;
+    }
+
+    .final-code {
+        margin: 20px 10px;
+        padding: 15px;
+        font-size: 32px;
+        letter-spacing: 8px;
     }
 }
