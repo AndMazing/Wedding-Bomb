@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Bomb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game">
+
+    <header>
+        <div>
+            <span class="warning">⚠ CLASSIFIED</span>
+            <h1>WEDDING PROTOCOL</h1>
+        </div>
+
+        <div class="serial">
+            SERIAL<br>
+            <strong id="serialNumber">A7-K3-19</strong>
+        </div>
+    </header>
+
+
+    <!-- TIMER -->
+    <div class="timer-container">
+        <div class="timer-label">TIME REMAINING</div>
+        <div id="timer">05:00</div>
+    </div>
+
+
+    <!-- MODULES -->
+    <main>
+
+        <!-- WIRES -->
+        <section class="module">
+            <div class="module-title">
+                WIRES
+            </div>
+            <div class="wires">
+                <button class="wire red" data-wire="red"></button>
+                <button class="wire blue" data-wire="blue"></button>
+                <button class="wire yellow" data-wire="yellow"></button>
+                <button class="wire green" data-wire="green"></button>
+            </div>
+        </section>
+
+
+        <!-- BUTTONS -->
+        <section class="module">
+            <div class="module-title">
+                BUTTONS
+            </div>
+            <div class="buttons">
+                <button class="big-button red-button" data-button="red">
+                    RED
+                </button>
+                <button class="big-button blue-button" data-button="blue">
+                    BLUE
+                </button>
+                <button class="big-button yellow-button" data-button="yellow">
+                    YELLOW
+                </button>
+            </div>
+        </section>
+
+
+        <!-- SYMBOLS -->
+        <section class="module">
+            <div class="module-title">
+                SYMBOLS
+            </div>
+            <div class="symbols">
+                <button data-symbol="flower">💐</button>
+                <button data-symbol="ring">💍</button>
+                <button data-symbol="heart">❤️</button>
+                <button data-symbol="game">🎮</button>
+            </div>
+        </section>
+
+
+        <!-- DISPLAY -->
+        <section class="module display-module">
+            <div class="module-title">
+                PASSWORD
+            </div>
+            <div class="display">
+                <span id="numberDisplay"></span>
+            </div>
+            <div class="number-buttons">
+                <button data-number="0">0</button>
+                <button data-number="1">1</button>
+                <button data-number="2">2</button>
+                <button data-number="3">3</button>
+                <button data-number="4">4</button>
+                <button data-number="5">5</button>
+                <button data-number="6">6</button>
+                <button data-number="7">7</button>
+                <button data-number="8">8</button>
+                <button data-number="9">9</button>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- STATUS -->
+    <div class="status">
+        <div>
+            STRIKES:
+            <span id="strikes">0</span> / 3
+        </div>
+        <div id="message">
+            BOMB ACTIVATED
+        </div>
+    </div>
+
+    <!-- Start -->
+    <div id="startScreen" class="overlay">
+    <div class="start-box">
+        <div class="warning">⚠ CLASSIFIED</div>
+        <h2>WEDDING PROTOCOL</h2>
+        <p>
+            DIE BOMBE WURDE AKTIVIERT.
+        </p>
+        <p>
+            Ihr habt 5 Minuten, um alle Module zu entschärfen.
+        </p>
+        <button id="startButton">
+            START MISSION
+        </button>
+
+    </div>
+
+</div>
+
+
+    <!-- SUCCESS -->
+    <div id="successScreen" class="overlay hidden">
+        <div class="success-box">
+            <div class="success-icon">
+                nice
+            </div>
+            <h2>BOMB DEFUSED</h2>
+            <p>
+                Mission Completed
+            </p>
+            <div class="final-code" id="finalCode">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FAILURE -->
+    <div id="failureScreen" class="overlay hidden">
+        <div class="failure-box">
+            <img src="images/explode.gif" alt="Explosion" class="explode-gif">
+            <p>
+                Die Bombe ist explodiert.
+            </p>
+            <button onclick="location.reload()">
+                RETRY
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>

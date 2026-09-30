@@ -1,0 +1,523 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   FRAMING
+   ========================================== */
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("images/background.jpg") center center / cover no-repeat fixed;
+
+    font-family: Arial, sans-serif;
+    color: #ddd;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.game {
+    width: 1000px;
+    max-width: 95vw;
+    background:
+        linear-gradient(
+            145deg,
+            #292929,
+            #111
+        );
+    border: 4px solid #444;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow:
+        0 0 40px #000,
+        inset 0 0 30px #000;
+}
+
+/* ==========================================
+   START
+   ========================================== */
+
+
+.start-box {
+    text-align: center;
+    padding: 50px;
+    background: #171717;
+    border: 4px solid #555;
+    box-shadow: 0 0 50px #000;
+    max-width: 600px;
+}
+
+.start-box h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin: 15px 0 25px;
+}
+
+.start-box p {
+    color: #aaa;
+    font-family: monospace;
+    margin: 10px 0;
+}
+
+#startButton {
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: #8b1e1e;
+    color: white;
+    border: 2px solid #aaa;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background: #b52a2a;
+    box-shadow: 0 0 15px #900;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
+    padding-bottom: 15px;
+}
+
+
+h1 {
+    margin: 5px 0 0;
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+
+
+.warning {
+    color: #e33;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+.serial {
+    text-align: right;
+    font-size: 11px;
+    color: #777;
+}
+
+
+.serial strong {
+    color: #ccc;
+}
+
+
+/* ==========================================
+   TIMER
+   ========================================== */
+.timer-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.timer-label {
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 3px;
+}
+
+
+#timer {
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: bold;
+    color: #d33;
+    text-shadow:
+        0 0 10px #900;
+}
+
+
+.timer-warning {
+    animation: blink 0.5s infinite;
+}
+
+
+@keyframes blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+
+/* ==========================================
+   MODULES
+   ========================================== */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Beide Reihen exakt gleich groß */
+    grid-template-rows: 250px 250px;
+    gap: 18px;
+}
+
+/* JEDES MODUL GLEICH GROSS */
+
+.module {
+    width: 100%;
+    height: 250px;
+    background: #171717;
+    border: 2px solid #444;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+.module-title {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   WIRES
+   ========================================== */
+
+.wires {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+}
+
+
+.wire {
+    height: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow:
+        0 3px 5px #000;
+    transition: 0.2s;
+}
+
+
+.wire:hover {
+    transform: scaleY(1.4);
+}
+
+
+.red {
+    background: #c22;
+}
+
+
+.blue {
+    background: #287bd6;
+}
+
+
+.yellow {
+    background: #d4b629;
+}
+
+
+.green {
+    background: #319447;
+}
+
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+
+.big-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 6px solid #333;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+        inset 0 -8px 10px #000,
+        0 5px 10px #000;
+
+}
+
+
+.big-button:active {
+    transform: translateY(4px);
+}
+
+
+.red-button {
+    background: #9d1d1d;
+}
+
+
+.blue-button {
+    background: #1d4e9d;
+}
+
+
+.yellow-button {
+    background: #a38b16;
+}
+
+
+/* ==========================================
+   SYMBOLS
+   ========================================== */
+
+.symbols {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+
+.symbols button {
+    font-size: 35px;
+    width: 65px;
+    height: 65px;
+    background: #222;
+    border: 2px solid #555;
+    cursor: pointer;
+}
+
+
+.symbols button:hover {
+    background: #333;
+}
+
+
+/* ==========================================
+   NUMBER DISPLAY
+   ========================================== */
+.display-module {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.display {
+    background: #09130a;
+    border: 5px solid #222;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    height: 75px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#numberDisplay {
+    color: #58e06a;
+    font-family: monospace;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+
+/* 9 Zahlen */
+
+.number-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: auto;
+
+}
+
+
+.number-buttons button {
+    width: 100%;
+    height: 35px;
+    background: #333;
+    color: white;
+    border: 1px solid #666;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.15s;
+}
+
+
+.number-buttons button:hover {
+    background: #555;
+    border-color: #999;
+}
+
+
+.number-buttons button:active {
+    transform: translateY(2px);
+}
+
+
+/* ==========================================
+   DISABLED MODULE BUTTONS
+   ========================================== */
+
+/*
+   Wird automatisch aktiviert,
+   wenn JavaScript button.disabled = true setzt.
+*/
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+
+/* Kein Hover-Effekt bei deaktivierten Buttons */
+button:disabled:hover {
+    transform: none;
+    background: inherit;
+}
+
+
+/* ==========================================
+   STATUS
+   ========================================== */
+.status {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 15px;
+    background: #111;
+    border: 1px solid #333;
+    font-family: monospace;
+}
+
+
+#strikes {
+    color: #e33;
+}
+
+
+#message {
+    color: #d4b629;
+    transition: 0.2s;
+}
+
+#message.error {
+    color: #ff3333;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff0000;
+    animation: errorFlash 0.4s;
+}
+
+@keyframes errorFlash {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ==========================================
+   OVERLAYS
+   ========================================== */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.success-box,
+.failure-box {
+    text-align: center;
+    padding: 50px;
+    background: #171717;
+    border: 4px solid #555;
+    box-shadow: 0 0 50px #000;
+}
+
+
+.success-icon {
+    font-size: 80px;
+    color: #55d66b;
+}
+
+.success-gif {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+
+.success-box h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.explode-gif {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+
+.final-code {
+    margin: 30px;
+    padding: 20px;
+    background: #081108;
+    color: #58e06a;
+    font-family: monospace;
+    font-size: 45px;
+    letter-spacing: 15px;
+}
+
+
+.failure-box h2 {
+    color: #d22;
+    font-size: 50px;
+}
