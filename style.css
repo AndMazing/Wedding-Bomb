@@ -642,17 +642,19 @@ button:disabled:hover {
        ========================= */
 
     .symbols {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        justify-items: center;
-        align-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: nowrap;
     }
 
     .symbols button {
-        width: 65px;
-        height: 65px;
-        font-size: 30px;
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+        flex-shrink: 0;
     }
 
 
