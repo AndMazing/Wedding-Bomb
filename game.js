@@ -51,10 +51,8 @@ function startTimer() {
         const minutes = Math.floor(timeLeft / 60);
         const seconds = timeLeft % 60;
 
-        timerElement.textContent =
-            `${minutes.toString().padStart(2, "0")}:${seconds
-                .toString()
-                .padStart(2, "0")}`;
+        timerElement.textContent = 
+            `${minutes}:${seconds.toString().padStart(2, "0")}`;
 
         if (timeLeft <= 30) {
             timerElement.classList.add("timer-warning");
