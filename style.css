@@ -623,16 +623,17 @@ button:disabled:hover {
     ========================= */
 
     .buttons {
-        gap: 8px;
+        gap: 6px;
         justify-content: center;
         align-items: center;
+        flex-wrap: nowrap;
     }
 
     .big-button {
-        width: 65px;
-        height: 65px;
+        width: 58px;
+        height: 58px;
         border-width: 5px;
-        font-size: 10px;
+        font-size: 9px;
     }
 
 
